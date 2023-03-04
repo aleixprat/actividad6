@@ -1,0 +1,8 @@
+.item {
+    width: 400px;
+}
+
+.item img {
+    border-radius: 50%;
+    padding: 10px;
+}

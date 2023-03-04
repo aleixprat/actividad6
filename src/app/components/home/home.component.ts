@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from 'src/app/interfaces/user.interface';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  arrUsers: User[] = [];
+  constructor (private usersServices :UsersService) {
+  
+  }
+
+  ngOnInit(){
+    this.arrUsers = this.usersServices.getAll();
+  }
 }
