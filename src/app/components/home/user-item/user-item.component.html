@@ -5,7 +5,7 @@
         </div>
         <ul class="d-flex flex-lg-row justify-content-around p-2">
           <li class="list-group-item">
-            <button class="btn btn-light">View</button>
+            <button [routerLink]="['/user',userRetrieve.id]" class="btn btn-light">View</button>
           </li>
           <li class="list-group-item">
             <button class="btn btn-light">Edit</button>
@@ -15,6 +15,6 @@
           </li>
         </ul>
         <div class="card-body border-top">
-          <a href="#" class="card-link">{{userRetrieve.username}}</a>
+          <a [routerLink]="['/user',userRetrieve.id]" class="card-link">{{userRetrieve.username}}</a>
         </div>
       </div>

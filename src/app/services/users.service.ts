@@ -11,4 +11,8 @@ export class UsersService {
   getAll(): User[] {
     return this.arrUsers;
   }
+
+  getById(id:string) : User | any {
+    return this.arrUsers.find( usuario => usuario.id?.toLocaleString() ==id);
+  }
 }
