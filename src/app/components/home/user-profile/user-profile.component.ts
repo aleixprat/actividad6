@@ -17,11 +17,17 @@ export class UserProfileComponent {
 
   }
 
-  ngOnInit() {
-    this.activatedRoute.params.subscribe((params: any) => {
-      let id= params.id;
-      this.userRetrieve = this.userServices.getById(id);
-
+   ngOnInit() {
+    this.activatedRoute.params.subscribe( async (params: any) : Promise<void> => {
+      try {
+        let id= params.id;
+        let response = await this.userServices.getById(id);
+        console.log(response);
+        //this.userRetrieve = response
+      }
+      catch (err) {
+        console.log("Error petición ID user")
+      }
     })
     
   }
