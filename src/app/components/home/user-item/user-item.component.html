@@ -8,7 +8,7 @@
             <button [routerLink]="['/user',userRetrieve.id]" class="btn btn-light">View</button>
           </li>
           <li class="list-group-item">
-            <button class="btn btn-light">Edit</button>
+            <button [routerLink]="['/updateuser',userRetrieve?.id]" class="btn btn-light">Edit</button>
           </li>
           <li class="list-group-item">
             <button class="btn btn-dark">Delete</button>

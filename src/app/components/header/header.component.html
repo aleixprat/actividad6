@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-body-tertiary mb-5">
     <div class="container-fluid">
         
       <img  class="navbar-brand logo-img border" src="https://img.freepik.com/vector-premium/cuadrado-colorido_530521-281.jpg" alt="">
@@ -8,18 +8,13 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="navbar-brand nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Home</a>
           </li>
-          <li class="navbar-brand nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="navbar-brand nav-item">
+          <!--<li class="navbar-brand nav-item">
             <a class="nav-link" href="#">Pricing</a>
-          </li>
+          </li>-->
         </ul>
-        <span class="navbar-text">
-          Navbar text with an inline element
-        </span>
+        <a class="no-style" [routerLink]="['/newuser']">Usuario nuevo</a>
       </div>
     </div>
   </nav>
