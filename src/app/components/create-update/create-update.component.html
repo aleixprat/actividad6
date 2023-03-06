@@ -31,12 +31,12 @@
         </div>
         <div class="form-group my-3">
             <label for="image">Imagen URL</label>
-            <input  formControlName="image" type="text" class="form-control"  id="image" />
+            <input (input)="updateImage($event)" formControlName="image" type="text" class="form-control"  id="image" />
             <p class="error" *ngIf="controlError('image', 'required')">No se puede dejar vacío</p>
 
             <p class="error" *ngIf="controlError('image', 'pattern')">No es una url correcta, porfavor valida la dirección</p>
             <figure class="my-2">
-                <img src="https://via.placeholder.com/400x400" alt="imagen">
+                <img [src]="imageProfile" alt="imagen">
             </figure>
         </div>
         <div class="form-group my-3">
@@ -52,6 +52,6 @@
             <p class="error" *ngIf="controlError('repite_password', 'required')">No se puede dejar vacío</p>
             
         </div>
-        <button type="submit" class="btn btn-primary my-3"  [disabled]="!formularioUser.valid">Enviar</button>
+        <button type="submit" class="btn btn-primary my-3"  [disabled]="!formularioUser.valid">{{buttonName}}</button>
     </form>
 </div>

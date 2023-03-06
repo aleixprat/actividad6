@@ -1,20 +1,20 @@
     <div class="card item bg-light">
-        <img class="card-img-top" [src]="userRetrieve.image" alt="Card image cap">
+        <img class="card-img-top" [src]="userRetrieve?.image" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title text-center">{{userRetrieve.first_name + " " + userRetrieve.last_name}}</h5>
+          <h5 class="card-title text-center">{{userRetrieve?.first_name + " " + userRetrieve.last_name}}</h5>
         </div>
         <ul class="d-flex flex-lg-row justify-content-around p-2">
           <li class="list-group-item">
-            <button [routerLink]="['/user',userRetrieve.id]" class="btn btn-light">View</button>
+            <button [routerLink]="['/user',userRetrieve?._id]" class="btn btn-light">View</button>
           </li>
           <li class="list-group-item">
-            <button [routerLink]="['/updateuser',userRetrieve?.id]" class="btn btn-light">Edit</button>
+            <button [routerLink]="['/updateuser',userRetrieve?._id]" class="btn btn-light">Edit</button>
           </li>
           <li class="list-group-item">
             <button class="btn btn-dark">Delete</button>
           </li>
         </ul>
         <div class="card-body border-top">
-          <a [routerLink]="['/user',userRetrieve.id]" class="card-link">{{userRetrieve.username}}</a>
+          <a [routerLink]="['/user',userRetrieve._id]" class="card-link">{{userRetrieve.username}}</a>
         </div>
       </div>

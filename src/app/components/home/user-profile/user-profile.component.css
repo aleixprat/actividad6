@@ -1,7 +1,9 @@
 .imagen {
     padding-right: 80px;
 }
-
+.imagen img {
+    border-radius: 50%;
+}
 .datos {
     margin-left: 70px;
 }

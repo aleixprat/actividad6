@@ -6,18 +6,16 @@ img {
     max-width: 300px;
 }
 
+/*Esto lo he copiado tal cual*/
 input.ng-invalid.ng-touched{
     border-bottom: 3px solid tomato;
-  }
-  
-  input.ng-valid.ng-touched{
+}
+
+input.ng-valid.ng-touched{
     border-bottom: 3px solid lightgreen;
-  }
-  
-  
-  
-  .error{
+}
+
+.error{
     color: tomato;
     font-size: 10px;
-  }
-  
+}

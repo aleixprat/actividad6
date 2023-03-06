@@ -22,8 +22,7 @@ export class UserProfileComponent {
       try {
         let id= params.id;
         let response = await this.userServices.getById(id);
-        console.log(response);
-        //this.userRetrieve = response
+        this.userRetrieve = response;
       }
       catch (err) {
         console.log("Error petición ID user")
