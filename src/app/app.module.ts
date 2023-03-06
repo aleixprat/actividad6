@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { UserItemComponent } from './components/home/user-item/user-item.component';
 import { UserProfileComponent } from './components/home/user-profile/user-profile.component';
 import { CreateUpdateComponent } from './components/create-update/create-update.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { CreateUpdateComponent } from './components/create-update/create-update.
     UserItemComponent,
     UserProfileComponent,
     CreateUpdateComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,

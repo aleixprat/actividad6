@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
-import { UserCreate } from '../interfaces/user-create.interface';
 import { User } from '../interfaces/user.interface';
 @Injectable({
   providedIn: 'root'
@@ -19,12 +18,13 @@ export class UsersService {
     return lastValueFrom(this.httpClient.get<any>(completeEndpoint));
   }
 
-  createUser(user:UserCreate) : Promise<any> {
+  createUser(user:User) : Promise<any> {
     return lastValueFrom(this.httpClient.post<any>(this.endPointUrl,user));
   }
 
-  updateUser(user:User) : Promise<any> {
-    return lastValueFrom(this.httpClient.put<any>(this.endPointUrl,user));
+  updateUser(user:User, id:string) : Promise<any> {
+    let completeEndpoint :string = `${this.endPointUrl}/${id}`;
+    return lastValueFrom(this.httpClient.put<any>(completeEndpoint,user));
   }
 
   deleteUser(id:string) {
