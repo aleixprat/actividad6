@@ -12,6 +12,7 @@ import { UserItemComponent } from './components/home/user-item/user-item.compone
 import { UserProfileComponent } from './components/home/user-profile/user-profile.component';
 import { CreateUpdateComponent } from './components/create-update/create-update.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
+import { C404Component } from './components/c404/c404.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { NotificationsComponent } from './components/notifications/notifications
     UserProfileComponent,
     CreateUpdateComponent,
     NotificationsComponent,
+    C404Component,
   ],
   imports: [
     BrowserModule,
