@@ -1,11 +1,6 @@
-.imagen {
-    padding-right: 80px;
-}
+
 .imagen img {
     border-radius: 50%;
-}
-.datos {
-    margin-left: 70px;
 }
 
 .datos button {
@@ -16,4 +11,19 @@
 
 .container {
     padding-bottom: 500px;
+}
+
+@media (min-width: 1200px) {
+    .imagen {
+        padding-right: 80px;
+    }
+    .datos {
+        margin-left: 70px;
+    }
+}
+@media (max-width: 1050px) {
+    .org-info {
+        display: flex;
+        flex-direction: column;
+    }
 }

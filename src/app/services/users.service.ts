@@ -10,7 +10,9 @@ export class UsersService {
   constructor(private httpClient : HttpClient) { }
 
   getAll(pagina : number = 1): Promise<any> {
-    return lastValueFrom(this.httpClient.get<any>(this.endPointUrl));
+    let completeEndpoint :string = `${this.endPointUrl}?page=${pagina}`;
+    console.log(completeEndpoint);
+    return lastValueFrom(this.httpClient.get<any>(completeEndpoint));
   }
 
   getById(id:string) : Promise<any> {
