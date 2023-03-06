@@ -1,4 +1,5 @@
 <div class="container">
+    <app-notifications [message]= "messageNotification" [clases]="clasesNotification" ></app-notifications>
     <div class="row mt-5">
         <div class="imagen col-12 col-md-6 col-lg-6 d-flex justify-content-end border-end border-3">
             <img class="shadow" [src]="userRetrieve?.image" alt="">
@@ -17,7 +18,7 @@
             </div>
             <ul class="d-flex flex-lg-row p-2">
                 <li class="list-group-item">
-                <button class="btn btn-dark">Eliminar</button>
+                <button class="btn btn-dark" (click)="modalDelete(userRetrieve?._id)">Eliminar</button>
                 </li>
                 <li class="list-group-item">
                 <button [routerLink]="['/updateuser',userRetrieve?._id]" class="btn btn-primary">Actualizar</button>

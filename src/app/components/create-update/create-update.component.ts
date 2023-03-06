@@ -77,7 +77,7 @@ export class CreateUpdateComponent {
         }
         catch (err) {
           this.activeForm = false;
-          this.updateNotifications("<h1>Error al realizar la petición</h1>","p-4 bg-danger");
+          this.updateNotifications("<h1>" + err + "</h1>","p-4 bg-danger");
         }
       } else {
         this.buttonName = "Crear";
@@ -167,8 +167,8 @@ export class CreateUpdateComponent {
         } else {
           this.updateNotifications("<p class='mb-0'>Error en la petición</p>","p-3 bg-danger");
         }
-      } catch {
-        this.updateNotifications("<p class='mb-0'>Error en la petición</p>","p-3 bg-danger");
+      } catch (err) {
+        this.updateNotifications("<p class='mb-0'>" + err + "</p>","p-3 bg-danger");
       }
 
     //Actualización
@@ -181,8 +181,8 @@ export class CreateUpdateComponent {
         } else {
           this.updateNotifications("<p class='mb-0'>Error en la petición</p>","p-3 bg-danger");
         }
-      } catch {
-        this.updateNotifications("<p class='mb-0'>Error en la petición</p>","p-3 bg-danger");
+      } catch (err) {
+        this.updateNotifications("<p class='mb-0'>" + err + "</p>","p-3 bg-danger");
       }
     }
     //Actualización

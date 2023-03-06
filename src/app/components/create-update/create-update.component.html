@@ -1,6 +1,6 @@
 <!--<form >-->
     <div class="container">
-        <app-notifications [message]= "messageNotification" [clases]="clasesNotification" ></app-notifications>
+    <app-notifications [message]= "messageNotification" [clases]="clasesNotification" ></app-notifications>
     <form *ngIf="activeForm" [formGroup]="formularioUser" (ngSubmit)="getForm()">
         <div *ngIf="isUpdate" class="form-group my-3">
             <label for="id">ID</label>

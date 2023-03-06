@@ -6,3 +6,11 @@
     border-radius: 50%;
     padding: 10px;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer {
+    font-size: 20px;
+}

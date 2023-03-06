@@ -4,14 +4,14 @@
           <h5 class="card-title text-center">{{userRetrieve?.first_name + " " + userRetrieve.last_name}}</h5>
         </div>
         <ul class="d-flex flex-lg-row justify-content-around p-2">
-          <li class="list-group-item">
-            <button [routerLink]="['/user',userRetrieve?._id]" class="btn btn-light">View</button>
+          <li class="list-group-item border-bottom border-5 border-success">
+            <i [routerLink]="['/user',userRetrieve?._id]" class="pointer fa-sharp fa-solid fa-eye"></i>
           </li>
-          <li class="list-group-item">
-            <button [routerLink]="['/updateuser',userRetrieve?._id]" class="btn btn-light">Edit</button>
+          <li class="list-group-item border-bottom border-5 border-info">
+              <i [routerLink]="['/updateuser',userRetrieve?._id]" class="pointer fa-solid fa-user-pen"></i>
           </li>
-          <li class="list-group-item">
-            <button class="btn btn-dark">Delete</button>
+          <li class="list-group-item border-bottom border-5 border-danger">
+            <i (click)="modalDelete(userRetrieve?._id)" class="pointer fa-sharp fa-solid fa-trash"></i>
           </li>
         </ul>
         <div class="card-body border-top">
